@@ -1,19 +1,12 @@
-public class Employee {
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
+public class Employee {
     public  int id;
     public  String name;
     public  double salary;
     public int workTime;
     public int SPH;
-
-    public Employee( int id,String name, double salary, int workTime, int SPH) {
-        this.id = id;
-        this.name = name;
-
-        this.salary = salary;
-        this.workTime = workTime;
-        this.SPH = SPH;
-    }
 
     public double computeYearlySalary(){
         return salary*12;
