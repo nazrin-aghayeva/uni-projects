@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class StackApp {
+public class StackApp1 {
    static Stack<Integer> result= new Stack<>();
     public static Stack<Integer> mergeStack(Stack<Integer> input, Stack<Integer> input2){
         while (input.size() != 0) {
