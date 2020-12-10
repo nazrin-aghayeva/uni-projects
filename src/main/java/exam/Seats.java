@@ -29,6 +29,12 @@ public class Seats {
             Scanner input = new Scanner(System.in);
             int number = input.nextInt();
             if (number == -1) break;
+            else if (seats.get(number).equals("ok")){
+                System.out.println("Selected");
+                seats.replace(number, "busy");
+                break;
+            }
+
             else {
                 while (seats.get(number).equals("busy")) {
                     System.out.println("This seat is busy select another one:");
@@ -36,11 +42,13 @@ public class Seats {
                     int num = in.nextInt();
                     if (seats.get(num).equals("ok")) {
                         System.out.println("Selected");
+                        seats.replace(number, "busy");
                         break;
                     }
                 }
             }
         }
+        System.out.println(seats);
 }
     public static void main(String[] args) {
         isBusy();
